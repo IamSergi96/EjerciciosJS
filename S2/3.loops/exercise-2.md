@@ -6,4 +6,8 @@ const alien = {
     planet: 'Eden',
     weight: '259kg'
 }
+for(const property in alien){
+    console.log(property);
+}
+
 ```
