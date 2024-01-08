@@ -10,3 +10,9 @@
     border-radius: 10px;
     background-color: aquamarine;
 }
+.card-image{
+    border: 3px solid #48ffc2;
+    border-radius: 10px;
+    background-color: aquamarine;
+    margin: 10px;
+}

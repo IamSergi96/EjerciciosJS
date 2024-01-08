@@ -1,35 +1,37 @@
-const urlEndpoint = "https://breakingbadapi.com/api/characters";
+const urlApi = "https://hp-api.onrender.com/api/characters";
 const galeria = document.createElement("div");
 galeria.classList.add("galeria");
-fetch(urlEndpoint)
-     .then(response => response.json())
-     .then(characters =>{
-        characters.forEach(character=>{
-            const characterImage = document.createElement("img")
-            characterImage.classList.add("imagenes")
-            characterImage.src = character.img
-            characterImage.alt = character.name
-            
-            const characterName = document.createElement("div")
-            characterName.classList.add("nombreImagen")
-            characterName.textContent = character.name
 
-            const characterCard = document.createElement("div")
-            characterCard.classList.add("targetaImagenes")
+async function getCharacters() {
+  try {
+    const response = await fetch(urlApi);
+    const characters = await response.json();
 
-            characterCard.appendChild(characterImage)
-            characterCard.appendChild(characterName)
+    characters.forEach((character) => {
+      // Creación de variables
+      const characterDiv = document.createElement("div");
+      characterDiv.classList.add("galeria-character");
 
-            galeria.appendChild(characterCard)
-        })
-     })
-.catch(error => console.error("Error:",error));
+      const characterName = document.createElement("h2");
+      characterName.textContent = character.name;
+      characterName.classList.add("galeria-character__name");
 
-// Failed to load resource: the server responded with a status of 404 (Not Found)
-// exercise-1.html:1 Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist.
-// exercise-1.html:1 Access to fetch at 'https://breakingbadapi.com/api/characters' from origin 'http://127.0.0.1:5500' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
-// breakingbadapi.com/api/characters:1 
-        
-// Failed to load resource: net::ERR_FAILED
-// exercise-1.js:26 Error: TypeError: Failed to fetch
-// at exercise-1.js:4:1
+      const characterImg = document.createElement("img");
+      characterImg.src = character.image;
+      characterImg.alt = character.name;
+      characterImg.classList.add("galeria-character__img");
+
+      const characterActor = document.createElement("h3");
+      characterActor.textContent = character.actor;
+
+      // Añadir a la galería
+      characterDiv.appendChild(characterName);
+      characterDiv.appendChild(characterImg);
+      characterDiv.appendChild(characterActor);
+      galeria.appendChild(characterDiv);
+      document.body.appendChild(galeria);
+    });
+  } catch (error) {
+    console.error("Error de fetching", error);
+  }
+}

@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://wallpaperaccess.com/full/1679015.jpg");
+    background-attachment: fixed;
+    background-repeat: unset;
+    display: flex;
+    flex-direction: column;
+}
+.galeriaPlanetas{
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+
+    
+}
+.galeriaPlanetas-planeta{
+    height: 25rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.galeriaPlanetas-planeta:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.galeriaPlanetas-planeta__image{
+    max-width: 100%;
+    height: auto;
+    max-height: 50%;
+}
+.galeriaPlanetas-planeta__name{
+    font: 2px;
+}
+@media screen and (max-width: 600px){
+    .galeriaPlanetas-planeta__image{
+        width: 100%;
+    }
+}
+.galeriaPersonajes{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+}
+.botonAtras{
+    height: 60px;
+    width: 200px;
+    color: white;
+    background-color: rgb(35, 35, 75);
+    padding: 0.5rem;
+    border-radius: 100vmax;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.personaje{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.personaje__image{
+    max-width: 100%;
+    width: 20em;
+    height: 30em;
+}
+
+h2, h3{
+    color: white;
+    background-color: rgb(35, 35, 75);
+    padding: 0.5rem;
+    border-radius: 100vmax;
+    text-transform: uppercase;
+    
+}
+.input{
+    width: 300px;
+    height: 15px;
+}

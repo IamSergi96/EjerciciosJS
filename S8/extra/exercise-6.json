@@ -11,7 +11,8 @@
       ],
       "critic": 10,
       "defense": 10,
-      "vitality": 250
+      "vitality": 250,
+      "initialVitality": 250
     },
     {
       "id": 2,
@@ -23,7 +24,8 @@
       ],
       "critic": 9,
       "defense": 15,
-      "vitality": 325
+      "vitality": 325,
+      "initialVitality": 325
     },
     {
       "id": 3,
@@ -35,10 +37,11 @@
       ],
       "critic": 10,
       "defense": 4,
-      "vitality": 250
+      "vitality": 250,
+      "initialVitality": 250
     },
     {
-      "id": 1,
+      "id": 4,
       "name": "Orco",
       "avatar": "http://localhost:3000/images/orco.jpg",
       "damage": [
@@ -46,10 +49,11 @@
       ],
       "critic": 15,
       "defense": 12,
-      "vitality": 300
+      "vitality": 300,
+      "initialVitality": 300
     },
     {
-      "id": 1,
+      "id": 5,
       "name": "Elfo",
       "avatar": "http://localhost:3000/images/elfo.jpg",
       "damage": [
@@ -57,7 +61,8 @@
       ],
       "critic": 6,
       "defense": 8,
-      "vitality": 225
+      "vitality": 225,
+      "initialVitality": 225
     }
   ]
 }

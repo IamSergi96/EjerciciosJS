@@ -1,0 +1,6 @@
+.cell{
+    border: solid black 1px;
+    height: 6rem;
+    width: 6rem;
+    background-color: aqua;
+}

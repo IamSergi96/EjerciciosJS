@@ -19,7 +19,7 @@ Para que una raza gane el combate tiene que dejar al contrincante con 0 puntos d
 personajes lanzarán los dados que tengan sus características (damage) de forma ordenada (primero una raza, luego la
 otra) y teniendo en cuenta las siguientes condiciones.
 
-Si la raza tiene tiene por ejemplo este daño:
+Si la raza tiene por ejemplo este daño:
 
 `"damage": ["2d6","1d10","2d20"]`
 
